@@ -1,0 +1,23 @@
+.nav-sidebar .nav-item .nav-link{
+    padding: 10px !important;
+}
+
+
+.table-report tr{
+   padding: 10px;
+   margin: 10px;
+   
+}
+
+
+.active{
+
+    background: linear-gradient(14deg, rgba(6,238,200,1) 0%, rgba(0,255,140,1) 100%);
+    color: white !important;
+}
+
+.btn-primary-bb{
+    background: rgb(6,238,200);
+    background: linear-gradient(14deg, rgba(6,238,200,1) 0%, rgba(0,255,140,1) 100%);
+    color: white;
+}

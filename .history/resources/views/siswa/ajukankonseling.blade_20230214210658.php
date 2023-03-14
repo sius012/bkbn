@@ -1,0 +1,53 @@
+@extends('adminlte::page')
+@php
+    
+@endphp
+@section('content')
+<div class="container">
+    <input class="form-control">
+    <div class="row">
+
+        @foreach($admin as $i => $adm)
+            <div class="card m-2" style="width:300px">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <img style="width: 50px" class="rounded-circle shadow" src="https://images.iphonephotographyschool.com/24755/1120/portrait-photography.jpg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <span class="font-weight-bold line-height-1">{{$adm->name}}</span><br>
+                            <span>Konselor</span>
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        <button class="btn btn-primary-bb btn-sm ">Ajukan Konseling</button>
+                    </div>
+                </div>
+            
+        </div>
+        @endforeach
+
+</div>  
+</div>
+
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+@endsection

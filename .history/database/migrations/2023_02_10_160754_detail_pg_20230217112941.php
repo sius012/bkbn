@@ -1,0 +1,46 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create("detail_pg", function (Blueprint $table) {
+            $table->id("id_dpg");
+            $table->unsignedBigInteger("id_pg");
+            $table->string("id_siswa");
+            $table->string("keterangan");
+
+
+            $table->foreign("id_pg")->references("id_pg")->on("penilaian_guru");
+            $table->foreign("id_")->references("id_pg")->on("penilaian_guru");
+        });
+
+        Schema::create("aspek_dpg", function (Blueprint $table) {
+            $table->id("id_adpg");
+            $table->unsignedBigInteger("id_dpg");
+            $table->unsignedBigInteger("id_aspek");
+            $table->integer("nilai");
+            $table->foreign("id_dpg")->references("id_dpg")->on("detail_pg");
+            $table->foreign("id_aspek")->references("id_aspek")->on("aspek_4b");
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+};
