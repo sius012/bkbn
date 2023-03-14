@@ -10,8 +10,8 @@
               <h3>  {{$item['kelas_display']}}</h3>
               <p>Angkatan {{$item['angkatan']}}</p>
               <div class="btn-group" role="group" aria-label="Basic example">
-                <a href="{{route("raport.kelas.detail", ['jurusan'=>$item['jurusan'], 'angkatan'=>$item['angkatan']])}}"><button type="button" class="btn btn-primary-bb"><i class="fa fa-print"></i></button></a>
-                <a href="{{route("raport.kelas.siswa", ['jurusan'=>$item['jurusan'], 'angkatan'=>$item['angkatan']])}}"><button type="button" class="btn btn-secondary">Middle</button></a>
+           
+              <button type="button"   onclick="redirect($(this))" class="btn btn-secondary"  href="{{route("raport.kelas.detail", ['jurusan'=>$item['jurusan'], 'angkatan'=>$item['angkatan']])}}" >Right</button>
                 <button type="button" class="btn btn-secondary">Right</button>
               </div>
             </div>
@@ -105,5 +105,8 @@
         $("input[name=param2]").val($(this).val());
        });
     });
+  </script>
+  <script>
+    
   </script>
 @endsection

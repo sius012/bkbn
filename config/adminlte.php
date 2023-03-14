@@ -295,6 +295,7 @@ return [
             'type'         => 'navbar-search',
             'text'         => 'search',
             'topnav_right' => true,
+            "for"=>'Admin'
         ],
         [
             'type'         => 'fullscreen-widget',
@@ -318,6 +319,7 @@ return [
             'text' => 'Dashboard',
             'url'  => 'admin/dashboard',
             'icon' => 'fas fa-fw fa-tachometer-alt  ',
+            "for"=>'Admin'
         ],
         [
             'text'    => 'Data Siswa',
@@ -327,14 +329,17 @@ return [
                     'icon' => 'fas fa-user m-1',
                     'text' => 'Siswa Aktif',
                     'url'  => 'siswaaktif',
+                    "for"=>'Admin:Kepala Sekolah'
                 ],
                 
                 [
                     'text' => 'Siswa Alumni',
                     'url'  => '#',
-                    "icon"=>"fas fa-users"
+                    "icon"=>"fas fa-users",
+                    "for"=>'Admin:Kepala Sekolah'
                 ],
             ],
+            "for"=>'Admin:Kepala Sekolah'
         ],
         [
             'text'    => 'Layanan Konseling',
@@ -356,25 +361,31 @@ return [
                     'text' => 'Pengajuan Masuk',
                     'url'  => 'pengajuanmasuk',
                     "icon"=>"fas fa-list"
+                    
                 ],
             ],
+            "for"=>'Siswa:Admin'
         ],
         [
             'text'    => 'E-Raport',
             'icon'    => 'fas  fa-book',
+            "for"=>'Admin:Kepala Sekolah',
             'submenu' => [
                 [
                     'icon' => 'fas fa-user m-1',
                     'text' => 'Raport Kelas',
                     'url'  => 'masukan-raport',
+                    "for"=>'Admin:Kepala Sekolah'
                 ],
                 
                 [
-                    'text' => 'Siswa Alumni',
+                    'text' => 'Siswa Alumni',gi
                     'url'  => '#',
-                    "icon"=>"fas fa-users"
+                    "icon"=>"fas fa-users",
+                    "for"=>'Admin:Kepala Sekolah'
                 ],
             ],
+            "for"=>'Admin:Guru:Kesiswaan'
         ],
         [
             'text'    => 'Pengaturan Akun',

@@ -42,6 +42,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+
+    public $timestamps = false;
 
     /**
      * The attributes that appends to returned entities.
